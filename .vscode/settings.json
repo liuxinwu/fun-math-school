@@ -1,0 +1,12 @@
+{
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "tsx",
+        "html"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}

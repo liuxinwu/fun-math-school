@@ -1,0 +1,104 @@
+.answer-wrap {
+    overflow: hidden;
+    .header-wrap {
+        width: 100%;
+
+        .title {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0px;
+            line-height: 23.17px;
+            color: rgba(0, 0, 0, 1);
+        }
+    
+        .title-desc {
+            display: block;
+            margin-top: 6px;
+            font-size: 10px;
+            letter-spacing: 0px;
+            line-height: 17.38px;
+            color: rgba(222, 215, 215, 1);
+        }
+    }
+
+    .answer-main {
+        margin-top: 25px;
+        width: 320px;
+        border-radius: 70px 70px 0px 0px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: -5px 3px 15px rgba(0, 0, 0, 0.25);
+
+        &_header {
+            margin-top: 59px;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 20.27px;
+            color: rgba(0, 0, 0, 1);
+
+            .countdown {
+                color: $red;
+            }
+        }
+
+        .des {
+            display: block;
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 14.48px;
+            color: rgba(153, 153, 153, 1);
+        }
+
+        .question {
+            margin-top: 18px;
+        }
+
+        .btn-group {
+            margin-top: 32px;
+
+            .nut-button {
+                margin: 0 5px;
+            }
+        }
+
+        .footer {
+            position: relative;
+            height: 192px;
+            margin-top: 10px;
+
+            .panda {
+                position: relative;
+                top: -9px;
+                right: -22px;
+                width: 160.16px;
+                height: 158.5px;
+                align-self: end; 
+                transform: rotate(38deg);       
+            }
+
+            .tips {
+                position: absolute;
+                top: 30px;
+                right: 100px;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 3px;
+                line-height: 14.48px;
+                color: rgba(242, 7, 117, 1);
+                white-space: pre-line;
+                text-align: center;
+            }
+    
+            .bubble {
+                position: absolute;
+                top: 0;
+                right: 86px;
+                transform: rotate(-9deg);
+                width: 118.23px;
+                height: 113.29px;
+            }
+        }
+    }
+}

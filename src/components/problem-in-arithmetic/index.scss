@@ -1,0 +1,20 @@
+.problem-in-arithmetic {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 36.2px;
+    color: rgba(0, 0, 0, 1);
+
+    .operator {
+        margin: 0 25px;
+    }
+
+    .result {
+        width: 64.93px;
+        height: 38px;
+        border-radius: 8px;
+        border: 1px solid rgba(54, 209, 220, 1);
+        box-shadow: -1px -2px 6px  rgba(54, 209, 220, 0.4);
+        text-align: center;
+    }
+}
