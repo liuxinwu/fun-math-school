@@ -1,0 +1,51 @@
+.classify-number-wrap {
+    min-height: 120px;
+}
+
+.classify-number {
+    width: 120px;
+    padding: 3px 0;
+    border-radius: 8px;
+    box-shadow: 0px 11px 28px  rgba(0, 0, 0, 0.4);
+
+
+    .icon-item {
+        width: 50%;
+        line-height: 1.1;
+    }
+}
+
+.iconfont {
+    font-size: 35px;
+}
+
+.result {
+    margin-left: 32px;
+    width: 120px;
+    line-height: normal;
+    border-radius: 8px;
+    box-shadow: 0px 11px 28px  rgba(0, 0, 0, 0.4);
+
+    .result-item {
+        margin: 0 9.5px;
+        padding: 3px 7px;
+        min-height: 45.69px;
+        border-radius: 8px;
+    
+        .result_input {
+            margin: 0 12px 0 12px;
+            width: 26px;
+            height: 25px;
+            text-align: center;
+            border: 1px solid rgba(54, 209, 220, 1);
+        }
+        
+        .result_text {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 17.38px;
+            color: rgba(0, 0, 0, 1);
+        }
+    }
+}

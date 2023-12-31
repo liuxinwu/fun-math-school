@@ -1,4 +1,4 @@
-.problem-in-arithmetic {
+.compare-sizes {
     font-size: 25px;
     font-weight: 700;
     letter-spacing: 0px;
@@ -6,15 +6,15 @@
     color: rgba(0, 0, 0, 1);
 
     .operator {
-        margin: 0 25px;
+        margin: 0 29px;
     }
 
     .result {
-        width: 64.93px;
-        height: 38px;
-        border-radius: 8px;
+        width: 37px;
+        height: 37px;
+        text-align: center;
+        border-radius: 40px;
         border: 1px solid $green;
         box-shadow: -1px -2px 6px  rgba(54, 209, 220, 0.4);
-        text-align: center;
     }
 }

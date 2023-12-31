@@ -34,6 +34,7 @@ const config = {
   },
   copy: {
     patterns: [
+      { from: 'src/static', to: 'dist/static' }
     ],
     options: {
     }
