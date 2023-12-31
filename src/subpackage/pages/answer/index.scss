@@ -11,7 +11,7 @@
             line-height: 23.17px;
             color: rgba(0, 0, 0, 1);
         }
-    
+
         .title-desc {
             display: block;
             margin-top: 6px;
@@ -23,8 +23,8 @@
     }
 
     .answer-main {
-        margin-top: 25px;
-        width: 320px;
+        margin: 20px 20px 0;
+        box-sizing: border-box;
         border-radius: 70px 70px 0px 0px;
         background: rgba(255, 255, 255, 1);
         box-shadow: -5px 3px 15px rgba(0, 0, 0, 0.25);
@@ -74,8 +74,8 @@
                 right: -22px;
                 width: 160.16px;
                 height: 158.5px;
-                align-self: end; 
-                transform: rotate(38deg);       
+                align-self: end;
+                transform: rotate(38deg);
             }
 
             .tips {
@@ -90,7 +90,7 @@
                 white-space: pre-line;
                 text-align: center;
             }
-    
+
             .bubble {
                 position: absolute;
                 top: 0;

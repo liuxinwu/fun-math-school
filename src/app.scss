@@ -75,17 +75,18 @@
     padding-right: 20px;
 }
 
-.p-column_20 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .p-top_20 {
     padding-top: 20px;
 }
 
 .p-bottom_20 {
     padding-bottom: 20px;
+}
+
+.p-column_20 {
+    @extend .p-bottom_20;
+    @extend .p-top_20;
+
 }
 
 .m-row_10 {
@@ -106,6 +107,24 @@
 
 .m-bottom_20 {
     margin-bottom: 20px;
+}
+
+.m-left_20 {
+  margin-left: 20px;
+}
+
+.m-right_20 {
+  margin-right: 20px;
+}
+
+.m-row_20 {
+  @extend .m-left_20;
+  @extend .m-right_20;
+}
+
+.m-column_20 {
+  @extend .m-top_20;
+  @extend .m-bottom_20;
 }
 // margin 、padding end
 

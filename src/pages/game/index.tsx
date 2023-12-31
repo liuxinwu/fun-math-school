@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 import './index.scss'
 
 export default function WrongQuestion(): ReactElement {
-    return <View className={classnames('index-wrap bg_primary flex_column align-items_center', process.env.TARO_ENV === 'h5' && 'index-wrap_h5')}>
+    return <View className={classnames('index-wrap bg_primary flex_column align-items_center p-row_20', process.env.TARO_ENV === 'h5' && 'index-wrap_h5')}>
         <View className='item flex_row justify-content_center'>
             <View className='cover'></View>
             <View className='content flex_column flex_1'>

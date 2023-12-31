@@ -4,7 +4,6 @@
     }
 
     .item {
-        width: 320px;
         height: 150px;
         padding: 15px;
         margin-top: 30px;
@@ -19,7 +18,7 @@
             margin-right: 20px;
             background-color: #ccc;
         }
-        
+
         .content {
             .title {
                 font-size: 14px;
@@ -28,7 +27,7 @@
                 line-height: 20.27px;
                 color: rgba(0, 0, 0, 1);
             }
-    
+
             .desc {
                 font-size: 10px;
                 font-weight: 700;
@@ -38,6 +37,6 @@
             }
         }
 
-        
+
     }
 }

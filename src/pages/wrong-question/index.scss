@@ -5,7 +5,7 @@
     box-sizing: border-box;
 
     .time_line {
-        width: 320px;
+        align-self: baseline;
         margin-bottom: 10px;
         font-size: 14px;
         font-weight: 700;
@@ -15,7 +15,6 @@
     }
 
     .question-item {
-        width: 320px;
         height: 75px;
         padding: 6px 15px;
         border-radius: 8px;
@@ -31,11 +30,11 @@
             margin-right: 30px;
             color: rgba(0, 0, 0, 1);
         }
-    
+
         .iconfong {
             font-size: 24px;
         }
-    
+
         .desc {
             font-size: 10px;
             font-weight: 400;
@@ -44,5 +43,5 @@
             color: rgba(201, 201, 201, 1);
         }
     }
-    
+
 }
