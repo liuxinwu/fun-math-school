@@ -1,9 +1,9 @@
 import { View, Text, Image } from '@tarojs/components';
 import { ReactElement } from 'react';
-import { Button } from '@nutui/nutui-react-taro';
 import panda from '@/assets/images/theme/panda-1.png'
 import bubble from '@/assets/images/theme/bubble.png'
 import ClassifyNumber from '@/components/classify-number';
+import { AtButton } from 'taro-ui';
 
 import './index.scss';
 
@@ -27,17 +27,17 @@ export default function Answer(): ReactElement {
             </View>
 
             <Text className='des p-row_20'>小主：发挥你的聪明才智，请用最快的速度将答案填入方框种哦！</Text>
-            
+
             <View className='question flex_1'>
                 {/* <ProblemInArithmetic />
                 <CompareSizes />
                 <Classify /> */}
                 <ClassifyNumber />
-            
+
                 <View className='btn-group flex_row justify-content_flex_end p-row_20'>
-                    <Button type='primary'>上一题</Button>
-                    <Button type='primary'>下一题</Button>
-                    <Button type='primary'>提  交</Button>
+                    <AtButton type='primary'>上一题</AtButton>
+                    <AtButton type='primary'>下一题</AtButton>
+                    <AtButton type='primary'>提  交</AtButton>
                 </View>
             </View>
 

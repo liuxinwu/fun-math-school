@@ -11,10 +11,6 @@ const config = {
     '@/project': path.resolve(__dirname, '..', 'project.config.json'),
   },
   designWidth: input => {
-    // 配置 NutUI 375 尺寸
-    if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
-      return 375
-    }
     // 全局使用 Taro 默认的 360 尺寸
     return 360
   },
@@ -28,7 +24,6 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [
-    '@tarojs/plugin-html'
   ],
   defineConstants: {
   },
@@ -42,9 +37,6 @@ const config = {
   framework: 'react',
   compiler: {
     type: 'webpack5',
-    // prebundle: {
-    //   exclude: ['@nutui/nutui-react-taro', '@nutui/icons-react-taro']
-    // }
   },
   cache: {
     enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
@@ -94,7 +86,8 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    esnextModules: ['taro-ui']
   }
 }
 
