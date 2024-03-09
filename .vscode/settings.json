@@ -4,6 +4,7 @@
         "javascriptreact",
         "typescript",
         "tsx",
+        "ts",
         "html"
     ],
     "editor.codeActionsOnSave": {

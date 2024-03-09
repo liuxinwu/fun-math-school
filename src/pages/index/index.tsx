@@ -1,5 +1,5 @@
-import { ReactElement } from 'react'
-import { View, Text, Image } from '@tarojs/components'
+import { ReactElement, useEffect } from 'react'
+import { View, Text, Image, Button } from '@tarojs/components'
 import classnames from 'classnames'
 import CARTOON_FIGURE_1 from '@/assets/images/cartoon-figure/cartoon-figure-1.png'
 import CARTOON_FIGURE_2 from '@/assets/images/cartoon-figure/cartoon-figure-2.png'
@@ -8,7 +8,7 @@ import CARTOON_FIGURE_4 from '@/assets/images/cartoon-figure/cartoon-figure-4.pn
 import CARTOON_FIGURE_5 from '@/assets/images/cartoon-figure/cartoon-figure-5.png'
 import THEME_1 from '@/assets/images/theme/theme-1.png'
 import Taro from '@tarojs/taro'
-import SelectGrade from './components/select-grade'
+import SelectBook from './components/select-book'
 
 import './index.scss'
 
@@ -58,7 +58,7 @@ export default function Index(): ReactElement {
 
   return <View className={classnames('index-wrap bg_primary justify-content_space_between flex_column', process.env.TARO_ENV === 'h5' && 'index-wrap_h5')}>
     <View>
-      <SelectGrade />
+      <SelectBook />
 
       <View className='catalogue p-row_20'>
         {
