@@ -8,6 +8,7 @@ const config = {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
     '@/utils': path.resolve(__dirname, '..', 'src/utils'),
     '@/store': path.resolve(__dirname, '..', 'src/store'),
+    '@/api': path.resolve(__dirname, '..', 'src/api'),
     '@/package': path.resolve(__dirname, '..', 'package.json'),
     '@/project': path.resolve(__dirname, '..', 'project.config.json'),
   },

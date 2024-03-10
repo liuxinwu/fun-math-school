@@ -25,6 +25,8 @@
       "@/assets/*": ["./src/assets/*"],
       "@/components/*": ["./src/components/*"],
       "@/utils/*": ["./src/utils/*"],
+      "@/store/*": ["./src/store/*"],
+      "@/api/*": ["./src/api/*"],
       "@/package": ["./package.json"],
       "@/project": ["./project.config.json"]
     }

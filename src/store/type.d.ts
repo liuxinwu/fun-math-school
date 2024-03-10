@@ -1,6 +1,6 @@
 declare namespace Store {
   export interface BookInfoType {
-    book: null | number;
+    book: string;
     chapter: null | number;
     subChapter: null | number;
   }

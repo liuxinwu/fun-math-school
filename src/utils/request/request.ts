@@ -1,7 +1,7 @@
 import Taro from "@tarojs/taro"
 import qs from "qs"
 
-export class RequestFn implements RequestType {
+export class RequestFn implements Request.RequestType {
   domain: string
   port: number | null
   protool: string
@@ -9,7 +9,9 @@ export class RequestFn implements RequestType {
   isNeedToken?: boolean
   isNeedLoading?: boolean
   isNeedCatchError?: boolean
-  
+
+  timer: NodeJS.Timeout
+
   // 请求任务缓存
   taskMap = new Map()
   getToken = () => ({})
@@ -19,10 +21,10 @@ export class RequestFn implements RequestType {
    *
    * @param config 配置对象
    */
-  constructor(config: ConstructorType) {
+  constructor(config: Request.ConstructorType) {
     this.#init(config)
   }
-  
+
   /**
    * 初始化函数
    *
@@ -34,7 +36,7 @@ export class RequestFn implements RequestType {
    * @param isNeedLoading 是否需要加载提示，默认为 true
    * @param isNeedCatchError 是否需要捕获错误，默认为 true
    */
-  #init(config: ConstructorType) {
+  #init(config: Request.ConstructorType) {
     const { domain, port = null, protocol = 'https', isNeedToken = true, isNeedLoading = true, isNeedCatchError = true, getToken = () => ({}) } = config
     this.domain = domain
     this.port = port
@@ -100,9 +102,13 @@ export class RequestFn implements RequestType {
   }
 
   #handleLoading(isClose = false): void {
-    if (isClose) return Taro.hideLoading()
+    if (isClose) {
+      clearTimeout(this.timer)
+      Taro.hideLoading()
+      return
+    }
 
-    setTimeout(() => {
+    this.timer = setTimeout(() => {
       Taro.showLoading({ title: '加载中' })
     }, 100)
   }
@@ -113,7 +119,7 @@ export class RequestFn implements RequestType {
    * @param option 请求配置
    * @returns 返回请求结果
    */
-  async #request<T>(option: Taro.request.Option): Promise<Taro.request.SuccessCallbackResult<T>> {
+  async #request<T>(option: Taro.request.Option): Promise<Taro.request.SuccessCallbackResult> {
     return new Promise((resolve, reject) => {
       const identification = this.#identification(option)
 
@@ -126,7 +132,7 @@ export class RequestFn implements RequestType {
         // 请求任务终止后，删除缓存
         this.taskMap.delete(identification)
         let errMsg = _.errMsg
-    
+
         switch(statusCode) {
           case 200:
           case 201:
@@ -158,7 +164,7 @@ export class RequestFn implements RequestType {
       }).finally(() => {
         this.isNeedLoading && this.#handleLoading(true)
       })
-      
+
       // 微信、抖音小程序中，如果请求任务已经终止，则不会触发回调函数
       const envType = Taro.getEnv()
       if (Taro.ENV_TYPE.WEAPP === envType || Taro.ENV_TYPE.TT === envType) {

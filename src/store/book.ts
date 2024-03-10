@@ -1,9 +1,9 @@
 import { atom } from "recoil";
 
-export const bookInfo = atom<BookInfoType>({
-  key: 'bookInfo',
+export const bookInfoState = atom<Store.BookInfoType>({
+  key: 'bookInfoState',
   default: {
-    book: null,
+    book: '',
     chapter: null,
     subChapter: null,
   }
